@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4278A5D789DAC94E6BC4BFA309A17EEFF7436A1B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4278A5D789DAC94E6BC4BFA309A17EEFF7436A1B" : 0,
+    "8D6AF3F0851A5FE85CDC21A835EF23FD2B119DF1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "39233199-79C8-4D60-9399-BE253A782101",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4278A5D789DAC94E6BC4BFA309A17EEFF7436A1B" : "IoTizer\/",
+    "8D6AF3F0851A5FE85CDC21A835EF23FD2B119DF1" : "..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "IoTizer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "IoTizer.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tattn-team\/IoTizer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4278A5D789DAC94E6BC4BFA309A17EEFF7436A1B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:tanakasan2525\/mywork-of-mac.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8D6AF3F0851A5FE85CDC21A835EF23FD2B119DF1"
+    }
+  ]
+}

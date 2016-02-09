@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		121CA79596AB0E45F6878DE6 /* Pods_IoTizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D191E4D63D5BDBEC5089A34C /* Pods_IoTizer.framework */; };
+		4A5C2D121C6A3BD700E9641F /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D111C6A3BD700E9641F /* Speaker.swift */; };
+		4A5C2D141C6A409700E9641F /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D131C6A409700E9641F /* Listener.swift */; };
+		4A5C2D161C6A424200E9641F /* Japanese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D151C6A424200E9641F /* Japanese.swift */; };
 		4A5C46B91C6A04AB00217599 /* libSRClientHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C46B61C6A04AB00217599 /* libSRClientHelper.a */; };
 		4A5C46BA1C6A04AB00217599 /* model_140319.dat in Resources */ = {isa = PBXBuildFile; fileRef = 4A5C46B81C6A04AB00217599 /* model_140319.dat */; };
 		4A5C46BD1C6A085900217599 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C46BC1C6A085900217599 /* libicucore.A.tbd */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A5C2D111C6A3BD700E9641F /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		4A5C2D131C6A409700E9641F /* Listener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listener.swift; sourceTree = "<group>"; };
+		4A5C2D151C6A424200E9641F /* Japanese.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Japanese.swift; sourceTree = "<group>"; };
 		4A5C46B31C6A04AB00217599 /* SRClientDataClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRClientDataClasses.h; sourceTree = "<group>"; };
 		4A5C46B41C6A04AB00217599 /* SRClientHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRClientHelper.h; sourceTree = "<group>"; };
 		4A5C46B61C6A04AB00217599 /* libSRClientHelper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSRClientHelper.a; sourceTree = "<group>"; };
@@ -60,6 +66,30 @@
 				D191E4D63D5BDBEC5089A34C /* Pods_IoTizer.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A5C2D0E1C6A31AA00E9641F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4A5C2D0F1C6A31AA00E9641F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4A5C2D111C6A3BD700E9641F /* Speaker.swift */,
+				4A5C2D131C6A409700E9641F /* Listener.swift */,
+				4A5C2D151C6A424200E9641F /* Japanese.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4A5C2D101C6A31AA00E9641F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4A5C46A91C6A03DC00217599 /* lib */ = {
@@ -128,6 +158,9 @@
 			children = (
 				4A5C46A91C6A03DC00217599 /* lib */,
 				4ADEDE141C69F366006BB578 /* AppDelegate.swift */,
+				4A5C2D0E1C6A31AA00E9641F /* Controllers */,
+				4A5C2D0F1C6A31AA00E9641F /* Utilities */,
+				4A5C2D101C6A31AA00E9641F /* Views */,
 				4ADEDE161C69F366006BB578 /* ViewController.swift */,
 				4ADEDE181C69F366006BB578 /* Main.storyboard */,
 				4ADEDE1B1C69F366006BB578 /* Assets.xcassets */,
@@ -271,9 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5C2D161C6A424200E9641F /* Japanese.swift in Sources */,
 				4ADEDE171C69F366006BB578 /* ViewController.swift in Sources */,
 				4ADEDE151C69F366006BB578 /* AppDelegate.swift in Sources */,
 				4ADEDE271C69F6ED006BB578 /* ApiKeys.swift in Sources */,
+				4A5C2D121C6A3BD700E9641F /* Speaker.swift in Sources */,
+				4A5C2D141C6A409700E9641F /* Listener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
