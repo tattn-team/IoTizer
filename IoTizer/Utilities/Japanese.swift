@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SWXMLHash
 
-public class Japanese: NSObject, SRClientHelperDelegate
+public class Japanese: NSObject
 {
     public static let shared = Japanese()
     

@@ -11,6 +11,7 @@
 		4A5C2D121C6A3BD700E9641F /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D111C6A3BD700E9641F /* Speaker.swift */; };
 		4A5C2D141C6A409700E9641F /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D131C6A409700E9641F /* Listener.swift */; };
 		4A5C2D161C6A424200E9641F /* Japanese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D151C6A424200E9641F /* Japanese.swift */; };
+		4A5C2D181C6A495F00E9641F /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D171C6A495F00E9641F /* Camera.swift */; };
 		4A5C46B91C6A04AB00217599 /* libSRClientHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C46B61C6A04AB00217599 /* libSRClientHelper.a */; };
 		4A5C46BA1C6A04AB00217599 /* model_140319.dat in Resources */ = {isa = PBXBuildFile; fileRef = 4A5C46B81C6A04AB00217599 /* model_140319.dat */; };
 		4A5C46BD1C6A085900217599 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C46BC1C6A085900217599 /* libicucore.A.tbd */; };
@@ -26,6 +27,7 @@
 		4A5C2D111C6A3BD700E9641F /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		4A5C2D131C6A409700E9641F /* Listener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listener.swift; sourceTree = "<group>"; };
 		4A5C2D151C6A424200E9641F /* Japanese.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Japanese.swift; sourceTree = "<group>"; };
+		4A5C2D171C6A495F00E9641F /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		4A5C46B31C6A04AB00217599 /* SRClientDataClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRClientDataClasses.h; sourceTree = "<group>"; };
 		4A5C46B41C6A04AB00217599 /* SRClientHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRClientHelper.h; sourceTree = "<group>"; };
 		4A5C46B61C6A04AB00217599 /* libSRClientHelper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSRClientHelper.a; sourceTree = "<group>"; };
@@ -34,7 +36,7 @@
 		4A5C46BC1C6A085900217599 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
 		4ADEDE111C69F366006BB578 /* IoTizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IoTizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ADEDE141C69F366006BB578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4ADEDE161C69F366006BB578 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4ADEDE161C69F366006BB578 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		4ADEDE191C69F366006BB578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ADEDE1B1C69F366006BB578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ADEDE1E1C69F366006BB578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		4A5C2D0E1C6A31AA00E9641F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4ADEDE161C69F366006BB578 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -81,6 +84,7 @@
 				4A5C2D111C6A3BD700E9641F /* Speaker.swift */,
 				4A5C2D131C6A409700E9641F /* Listener.swift */,
 				4A5C2D151C6A424200E9641F /* Japanese.swift */,
+				4A5C2D171C6A495F00E9641F /* Camera.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -161,7 +165,6 @@
 				4A5C2D0E1C6A31AA00E9641F /* Controllers */,
 				4A5C2D0F1C6A31AA00E9641F /* Utilities */,
 				4A5C2D101C6A31AA00E9641F /* Views */,
-				4ADEDE161C69F366006BB578 /* ViewController.swift */,
 				4ADEDE181C69F366006BB578 /* Main.storyboard */,
 				4ADEDE1B1C69F366006BB578 /* Assets.xcassets */,
 				4ADEDE1D1C69F366006BB578 /* LaunchScreen.storyboard */,
@@ -309,6 +312,7 @@
 				4ADEDE151C69F366006BB578 /* AppDelegate.swift in Sources */,
 				4ADEDE271C69F6ED006BB578 /* ApiKeys.swift in Sources */,
 				4A5C2D121C6A3BD700E9641F /* Speaker.swift in Sources */,
+				4A5C2D181C6A495F00E9641F /* Camera.swift in Sources */,
 				4A5C2D141C6A409700E9641F /* Listener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +427,7 @@
 			baseConfigurationReference = 6D07C03C66F61335BA054A67 /* Pods-IoTizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = IoTizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -449,6 +454,7 @@
 			baseConfigurationReference = CC7CC47C71FACA2ED88CAADE /* Pods-IoTizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = IoTizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

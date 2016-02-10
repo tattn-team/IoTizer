@@ -12,12 +12,17 @@ import RxCocoa
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CameraDelegate {
     
+    var timer: NSTimer?
+    var timerCounter = 0
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Camera.shared.delegate = self
+        Camera.shared.start()
         
         let label = UILabel(frame: CGRectMake(20, 20, 400, 30))
         label.text = "ダミーテキスト"
@@ -42,7 +47,25 @@ class ViewController: UIViewController {
         }.addDisposableTo(disposeBag)
         
         view.addSubview(voiceButton)
+        
+        view.backgroundColor = UIColor.whiteColor()
     }
     
+    func timerUpdate() {
+        if timerCounter++ >= 2 {
+            view.backgroundColor = UIColor.whiteColor()
+            self.timer?.invalidate()
+        }
+    }
+    
+    // MARK: - CameraDelegate
+    
+    func detectMotion() {
+        if view.backgroundColor == UIColor.whiteColor() {
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerUpdate", userInfo: nil, repeats: true)
+            view.backgroundColor = UIColor.redColor()
+        }
+        self.timerCounter = 0
+    }
 }
 
