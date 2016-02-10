@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import CoreLocation
 import RxSwift
 import RxCocoa
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController, CameraDelegate {
+class ViewController: UIViewController, CameraDelegate, LocatorDelegate {
     
     var timer: NSTimer?
     var timerCounter = 0
     let disposeBag = DisposeBag()
+    
+    var locationLabel: UILabel!
+    var rotationLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +28,14 @@ class ViewController: UIViewController, CameraDelegate {
         Camera.shared.delegate = self
         Camera.shared.start()
         
-        let label = UILabel(frame: CGRectMake(20, 20, 400, 30))
+        Locator.shared.delegate = self
+        Locator.shared.start()
+        
+        let label = UILabel(frame: CGRectMake(20, 20, 500, 30))
         label.text = "ダミーテキスト"
         view.addSubview(label)
         
-        let voiceButton = UIButton(frame: CGRectMake(20, 60, 400, 30))
+        let voiceButton = UIButton(frame: CGRectMake(20, 60, 500, 30))
         voiceButton.setTitle("音声認識", forState: .Normal)
         voiceButton.backgroundColor = UIColor.blueColor()
         voiceButton.rx_tap.subscribeNext { _ in
@@ -48,6 +55,13 @@ class ViewController: UIViewController, CameraDelegate {
         
         view.addSubview(voiceButton)
         
+        locationLabel = UILabel(frame: CGRectMake(20, 100, 250, 30))
+        locationLabel.font = UIFont.systemFontOfSize(7)
+        rotationLabel = UILabel(frame: CGRectMake(270, 100, 250, 30))
+        rotationLabel.font = UIFont.systemFontOfSize(7)
+        view.addSubview(locationLabel)
+        view.addSubview(rotationLabel)
+        
         view.backgroundColor = UIColor.whiteColor()
     }
     
@@ -58,7 +72,7 @@ class ViewController: UIViewController, CameraDelegate {
         }
     }
     
-    // MARK: - CameraDelegate
+// MARK: - CameraDelegate
     
     func detectMotion() {
         if view.backgroundColor == UIColor.whiteColor() {
@@ -66,6 +80,17 @@ class ViewController: UIViewController, CameraDelegate {
             view.backgroundColor = UIColor.redColor()
         }
         self.timerCounter = 0
+    }
+    
+// MARK: - LocatorDelegate
+    
+    func updateLocation(location: CLLocation) {
+        let coord = location.coordinate
+        self.locationLabel.text = "lat: \(coord.latitude), long: \(coord.longitude)"
+    }
+    
+    func updateRotation(heading: CLHeading) {
+        self.rotationLabel.text = "\(heading.magneticHeading) deg"
     }
 }
 
