@@ -21,6 +21,7 @@ class ViewController: UIViewController, CameraDelegate, LocatorDelegate {
     
     var locationLabel: UILabel!
     var rotationLabel: UILabel!
+    var proximitySwitch: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +63,19 @@ class ViewController: UIViewController, CameraDelegate, LocatorDelegate {
         view.addSubview(locationLabel)
         view.addSubview(rotationLabel)
         
+        let proximityLabel = UILabel(frame: CGRectMake(20, 140, 80, 30))
+        proximitySwitch = UISwitch(frame: CGRectMake(100, 140, 500, 30))
+        proximityLabel.text = "近接センサ"
+        view.addSubview(proximityLabel)
+        view.addSubview(proximitySwitch)
+        
         view.backgroundColor = UIColor.whiteColor()
+        
+        
+        // 近接センサ (3cmくらいで反応, 反応後画面暗転, Landscapeだと動かない)
+//        UIDevice.currentDevice().proximityMonitoringEnabled = true
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "proximityUpdate:", name: UIDeviceProximityStateDidChangeNotification, object: nil)
+        //        NSNotificationCenter.defaultCenter().removeObserver(self, name:UIDeviceProximityStateDidChangeNotification, object: nil)
     }
     
     func timerUpdate() {
@@ -70,6 +83,10 @@ class ViewController: UIViewController, CameraDelegate, LocatorDelegate {
             view.backgroundColor = UIColor.whiteColor()
             self.timer?.invalidate()
         }
+    }
+    
+    func proximityUpdate(notification: NSNotification) {
+        proximitySwitch.on = UIDevice.currentDevice().proximityState
     }
     
 // MARK: - CameraDelegate
