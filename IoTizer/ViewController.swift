@@ -8,12 +8,13 @@
 
 import UIKit
 import CoreLocation
+import CoreMotion
 import RxSwift
 import RxCocoa
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController, CameraDelegate, LocatorDelegate {
+class ViewController: UIViewController, CameraDelegate, LocatorDelegate, SensorDelegate {
     
     var timer: NSTimer?
     var timerCounter = 0
@@ -22,6 +23,7 @@ class ViewController: UIViewController, CameraDelegate, LocatorDelegate {
     var locationLabel: UILabel!
     var rotationLabel: UILabel!
     var proximitySwitch: UISwitch!
+    var accelerometerLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,11 @@ class ViewController: UIViewController, CameraDelegate, LocatorDelegate {
         
         Locator.shared.delegate = self
         Locator.shared.start()
+        
+        Sensor.shared.delegate = self
+        Sensor.shared.startAccelerometer()
+        // 近接センサ (3cmくらいで反応, 反応後画面暗転, Landscapeだと動かない)
+        // Sensor.shared.startProximityMonitor()
         
         let label = UILabel(frame: CGRectMake(20, 20, 500, 30))
         label.text = "ダミーテキスト"
@@ -69,13 +76,11 @@ class ViewController: UIViewController, CameraDelegate, LocatorDelegate {
         view.addSubview(proximityLabel)
         view.addSubview(proximitySwitch)
         
+        accelerometerLabel = UILabel(frame: CGRectMake(20, 180, 500, 30))
+        accelerometerLabel.font = UIFont.systemFontOfSize(7)
+        view.addSubview(accelerometerLabel)
+        
         view.backgroundColor = UIColor.whiteColor()
-        
-        
-        // 近接センサ (3cmくらいで反応, 反応後画面暗転, Landscapeだと動かない)
-//        UIDevice.currentDevice().proximityMonitoringEnabled = true
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "proximityUpdate:", name: UIDeviceProximityStateDidChangeNotification, object: nil)
-        //        NSNotificationCenter.defaultCenter().removeObserver(self, name:UIDeviceProximityStateDidChangeNotification, object: nil)
     }
     
     func timerUpdate() {
@@ -83,10 +88,6 @@ class ViewController: UIViewController, CameraDelegate, LocatorDelegate {
             view.backgroundColor = UIColor.whiteColor()
             self.timer?.invalidate()
         }
-    }
-    
-    func proximityUpdate(notification: NSNotification) {
-        proximitySwitch.on = UIDevice.currentDevice().proximityState
     }
     
 // MARK: - CameraDelegate
@@ -108,6 +109,17 @@ class ViewController: UIViewController, CameraDelegate, LocatorDelegate {
     
     func updateRotation(heading: CLHeading) {
         self.rotationLabel.text = "\(heading.magneticHeading) deg"
+    }
+    
+// MARK: - SensorDelegate
+    
+    func accelerometerUpdate(data: CMAccelerometerData) {
+        let a = data.acceleration
+        self.accelerometerLabel.text = "x:\(a.x) y:\(a.y) z:\(a.z)"
+    }
+    
+    func proximityUpdate(detected: Bool) {
+        proximitySwitch.on = detected
     }
 }
 

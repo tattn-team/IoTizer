@@ -13,6 +13,7 @@
 		4A5C2D161C6A424200E9641F /* Japanese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D151C6A424200E9641F /* Japanese.swift */; };
 		4A5C2D181C6A495F00E9641F /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D171C6A495F00E9641F /* Camera.swift */; };
 		4A5C2D1A1C6B61BE00E9641F /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D191C6B61BE00E9641F /* Locator.swift */; };
+		4A5C2D1C1C6B85E000E9641F /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D1B1C6B85E000E9641F /* Sensor.swift */; };
 		4A5C46B91C6A04AB00217599 /* libSRClientHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C46B61C6A04AB00217599 /* libSRClientHelper.a */; };
 		4A5C46BA1C6A04AB00217599 /* model_140319.dat in Resources */ = {isa = PBXBuildFile; fileRef = 4A5C46B81C6A04AB00217599 /* model_140319.dat */; };
 		4A5C46BD1C6A085900217599 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5C46BC1C6A085900217599 /* libicucore.A.tbd */; };
@@ -30,6 +31,7 @@
 		4A5C2D151C6A424200E9641F /* Japanese.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Japanese.swift; sourceTree = "<group>"; };
 		4A5C2D171C6A495F00E9641F /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		4A5C2D191C6B61BE00E9641F /* Locator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
+		4A5C2D1B1C6B85E000E9641F /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		4A5C46B31C6A04AB00217599 /* SRClientDataClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRClientDataClasses.h; sourceTree = "<group>"; };
 		4A5C46B41C6A04AB00217599 /* SRClientHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRClientHelper.h; sourceTree = "<group>"; };
 		4A5C46B61C6A04AB00217599 /* libSRClientHelper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSRClientHelper.a; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				4A5C2D151C6A424200E9641F /* Japanese.swift */,
 				4A5C2D171C6A495F00E9641F /* Camera.swift */,
 				4A5C2D191C6B61BE00E9641F /* Locator.swift */,
+				4A5C2D1B1C6B85E000E9641F /* Sensor.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				4ADEDE171C69F366006BB578 /* ViewController.swift in Sources */,
 				4ADEDE151C69F366006BB578 /* AppDelegate.swift in Sources */,
 				4ADEDE271C69F6ED006BB578 /* ApiKeys.swift in Sources */,
+				4A5C2D1C1C6B85E000E9641F /* Sensor.swift in Sources */,
 				4A5C2D1A1C6B61BE00E9641F /* Locator.swift in Sources */,
 				4A5C2D121C6A3BD700E9641F /* Speaker.swift in Sources */,
 				4A5C2D181C6A495F00E9641F /* Camera.swift in Sources */,
