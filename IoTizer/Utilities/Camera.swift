@@ -34,7 +34,7 @@ public class Camera: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate
 //        session.sessionPreset = AVCaptureSessionPresetMedium
 //        session.sessionPreset = AVCaptureSessionPresetLow
         
-        var camera: AVCaptureDevice!
+        var camera: AVCaptureDevice?
         for captureDevice: AnyObject in AVCaptureDevice.devices() {
             // 前面カメラ
             if captureDevice.position == AVCaptureDevicePosition.Front {
@@ -67,11 +67,11 @@ public class Camera: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate
         videoDataOutput?.videoSettings = [kCVPixelBufferPixelFormatTypeKey : Int(kCVPixelFormatType_32BGRA)]
         
         do {
-            try camera.lockForConfiguration()
+            try camera?.lockForConfiguration()
             // FPS: 2
-            camera.activeVideoMinFrameDuration = CMTimeMake(1, 2)
+            camera?.activeVideoMinFrameDuration = CMTimeMake(1, 2)
             
-            camera.unlockForConfiguration()
+            camera?.unlockForConfiguration()
         } catch _ {
         }
     }

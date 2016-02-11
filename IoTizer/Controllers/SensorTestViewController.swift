@@ -14,7 +14,7 @@ import RxCocoa
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController, CameraDelegate, LocatorDelegate, SensorDelegate {
+class SensorTestViewController: UIViewController, CameraDelegate, LocatorDelegate, SensorDelegate {
     
     var timer: NSTimer?
     var timerCounter = 0
