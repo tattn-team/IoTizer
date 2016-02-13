@@ -35,6 +35,12 @@ public class Listener: NSObject, SRClientHelperDelegate
         srcHelper!.start()
     }
     
+    public func stop() {
+        if let helper = self.srcHelper {
+            helper.cancel()
+        }
+    }
+    
 // MARK: - SRClientHelperDelegate
     
     public func srcDidRecognize(data: NSData!) {

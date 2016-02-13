@@ -8,18 +8,24 @@
 
 import UIKit
 
-class MainViewController: UIViewController, CameraDelegate
+class MainViewController: UIViewController, LocatorDelegate, CameraDelegate
 {
     var timer: NSTimer?
     var timerCounter = 0
     
     var faceLabel: UILabel!
     
+    var baseRotation: CLLocationDirection?
+    var isOpening = false
+    
     override func viewDidLoad() {
         self.setupUI()
         
         Camera.shared.delegate = self
         Camera.shared.start()
+        
+        Locator.shared.delegate = self
+        Locator.shared.start()
     }
     
     private func setupUI() {
@@ -40,6 +46,26 @@ class MainViewController: UIViewController, CameraDelegate
         }
     }
     
+    func detectOpening(flag: Bool) {
+        if flag {
+            print("[LISTENING]")
+            Listener.shared.listen({ (message, error) -> Void in
+                if message == "" {
+                    // stackoverflowが怖い
+                    self.detectOpening(flag)
+                }
+                else {
+                    print(message)
+                }
+            })
+        }
+        else {
+            print("[FINISHED to LISTEN]")
+            Listener.shared.stop()
+        }
+    }
+    
+    
 // MARK: - CameraDelegate
     
     func detectMotion() {
@@ -48,5 +74,32 @@ class MainViewController: UIViewController, CameraDelegate
             self.faceLabel.hidden = false
         }
         self.timerCounter = 0
+    }
+    
+    
+// MARK: - LocatorDelegate
+    
+    func updateLocation(location: CLLocation) {
+    }
+    
+    func updateRotation(heading: CLHeading) {
+        if baseRotation == nil {
+            baseRotation = heading.magneticHeading
+        }
+        else {
+            let value = fabs(baseRotation!.distanceTo(heading.magneticHeading))
+            if isOpening {
+                if value < 30 {
+                    self.detectOpening(false)
+                    isOpening = false
+                }
+            }
+            else {
+                if value > 30 {
+                    self.detectOpening(true)
+                    isOpening = true
+                }
+            }
+        }
     }
 }

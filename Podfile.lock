@@ -4,6 +4,7 @@ PODS:
   - RxCocoa (2.1.0):
     - RxSwift (~> 2.0)
   - RxSwift (2.1.0)
+  - SwiftDate (2.0.2)
   - SwiftyJSON (2.3.2)
   - SWXMLHash (2.1.0)
 
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - NCMB (from `https://github.com/NIFTYCloud-mbaas/ncmb_ios.git`)
   - RxCocoa
   - RxSwift
+  - SwiftDate (~> 2.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
   - SWXMLHash (~> 2.1.0)
 
@@ -34,6 +36,7 @@ SPEC CHECKSUMS:
   NCMB: 22f8938d950df3e7c89a3afc7e4007b8b9d5c773
   RxCocoa: 79b5feb8378545336e756a0a33fcf5e95050b71c
   RxSwift: 110fb07f81c17c2c3b3254d168363057b1880d18
+  SwiftDate: b4f4d0962afe48365ad2800c9850a6626deb9359
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   SWXMLHash: 7257a358b3ab2f7a209e0b4e4cf552e8b6df5f0f
 

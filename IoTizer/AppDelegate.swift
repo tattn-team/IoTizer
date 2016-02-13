@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NCMB.setApplicationKey(ApiKeys.NCMB_APP, clientKey: ApiKeys.NCMB_CLI)
         
         // Nifty Cloud mBaaS sample
-//        let query = NCMBQuery(className: "TestClass")
+//        let query = NCMBQuery(className: "Menu")
 //        query.whereKey("message", equalTo: "test")
 //        query.findObjectsInBackgroundWithBlock { (objs, error) -> Void in
 //            if error == nil {
@@ -37,16 +37,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                    print("[FIND] \(objs[0]["message"])")
 //                }
 //                else {
-//                    var saveError: NSError?
-//                    let obj = NCMBObject(className: "TestClass")
+                    var saveError: NSError?
+                    let obj = NCMBObject(className: "Menu")
+//        obj.setObject(["玉ねぎ", "にんじん"], forKey: "")
 //                    obj.setObject("Hello, NCMB!", forKey: "message")
-//                    obj.save(&saveError)
-//                    if saveError == nil {
-//                        print("[SAVE] Done")
-//                    }
-//                    else {
-//                        print("[SAVE-ERROR] \(saveError)")
-//                    }
+                    obj.save(&saveError)
+                    if saveError == nil {
+                        print("[SAVE] Done")
+                    }
+                    else {
+                        print("[SAVE-ERROR] \(saveError)")
+                    }
 //                }
 //            }
 //            else {

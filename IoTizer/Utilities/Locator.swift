@@ -41,6 +41,10 @@ public class Locator: NSObject, CLLocationManagerDelegate
         mgr.stopUpdatingHeading()
     }
     
+    public func getRotation() -> CLLocationDirection {
+        return mgr.heading!.magneticHeading
+    }
+    
 // MARK: - CLLocationManagerDelegate
     
     public func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation){
