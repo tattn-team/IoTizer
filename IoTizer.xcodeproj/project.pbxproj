@@ -11,6 +11,7 @@
 		4A527D8B1C6EC165002912D3 /* InventoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A527D8A1C6EC165002912D3 /* InventoryManager.swift */; };
 		4A527D8D1C6EC4C1002912D3 /* LimitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A527D8C1C6EC4C1002912D3 /* LimitManager.swift */; };
 		4A527D8F1C6ED489002912D3 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A527D8E1C6ED489002912D3 /* MenuManager.swift */; };
+		4A527D911C6F1151002912D3 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A527D901C6F1151002912D3 /* Brain.swift */; };
 		4A5C2D121C6A3BD700E9641F /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D111C6A3BD700E9641F /* Speaker.swift */; };
 		4A5C2D141C6A409700E9641F /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D131C6A409700E9641F /* Listener.swift */; };
 		4A5C2D161C6A424200E9641F /* Japanese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C2D151C6A424200E9641F /* Japanese.swift */; };
@@ -32,6 +33,7 @@
 		4A527D8A1C6EC165002912D3 /* InventoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryManager.swift; sourceTree = "<group>"; };
 		4A527D8C1C6EC4C1002912D3 /* LimitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitManager.swift; sourceTree = "<group>"; };
 		4A527D8E1C6ED489002912D3 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		4A527D901C6F1151002912D3 /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		4A5C2D111C6A3BD700E9641F /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		4A5C2D131C6A409700E9641F /* Listener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listener.swift; sourceTree = "<group>"; };
 		4A5C2D151C6A424200E9641F /* Japanese.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Japanese.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				4ADEDE201C69F366006BB578 /* Info.plist */,
 				4ADEDE261C69F6ED006BB578 /* ApiKeys.swift */,
 				4A5C46BB1C6A059000217599 /* IoTizer-Bridging-Header.h */,
+				4A527D901C6F1151002912D3 /* Brain.swift */,
 			);
 			path = IoTizer;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				4ADEDE171C69F366006BB578 /* SensorTestViewController.swift in Sources */,
 				4ADEDE151C69F366006BB578 /* AppDelegate.swift in Sources */,
 				4ADEDE271C69F6ED006BB578 /* ApiKeys.swift in Sources */,
+				4A527D911C6F1151002912D3 /* Brain.swift in Sources */,
 				4A5C2D1C1C6B85E000E9641F /* Sensor.swift in Sources */,
 				4A527D8F1C6ED489002912D3 /* MenuManager.swift in Sources */,
 				4A5C2D1A1C6B61BE00E9641F /* Locator.swift in Sources */,

@@ -55,7 +55,7 @@ class MainViewController: UIViewController, LocatorDelegate, CameraDelegate
                     self.detectOpening(flag)
                 }
                 else {
-                    print(message)
+                    Brain.shared.input(message)
                 }
             })
         }

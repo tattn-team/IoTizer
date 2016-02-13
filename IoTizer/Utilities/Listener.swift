@@ -37,7 +37,7 @@ public class Listener: NSObject, SRClientHelperDelegate
     
     public func stop() {
         if let helper = self.srcHelper {
-            helper.cancel()
+            helper.stop()
         }
     }
     
