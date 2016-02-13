@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (3.2.0)
+  - NCMB (2.2.5)
   - RxCocoa (2.1.0):
     - RxSwift (~> 2.0)
   - RxSwift (2.1.0)
@@ -8,22 +9,29 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
+  - NCMB (from `https://github.com/NIFTYCloud-mbaas/ncmb_ios.git`)
   - RxCocoa
   - RxSwift
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
   - SWXMLHash (~> 2.1.0)
 
 EXTERNAL SOURCES:
+  NCMB:
+    :git: https://github.com/NIFTYCloud-mbaas/ncmb_ios.git
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
+  NCMB:
+    :commit: e54a0f37cd98d642299acb9559c7f3bbbd44fd4a
+    :git: https://github.com/NIFTYCloud-mbaas/ncmb_ios.git
   SwiftyJSON:
     :commit: 42bdb102d2624b143c07850ebdc1537d5b6579b6
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  NCMB: 22f8938d950df3e7c89a3afc7e4007b8b9d5c773
   RxCocoa: 79b5feb8378545336e756a0a33fcf5e95050b71c
   RxSwift: 110fb07f81c17c2c3b3254d168363057b1880d18
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a

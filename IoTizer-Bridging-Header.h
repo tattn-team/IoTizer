@@ -5,3 +5,5 @@
 
 #include "SRClientDataClasses.h"
 #include "SRClientHelper.h"
+
+#import <NCMB/NCMB.h>

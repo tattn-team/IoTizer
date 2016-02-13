@@ -7,5 +7,6 @@ target 'IoTizer' do
 	pod 'Alamofire', '~> 3.0'
 	pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 	pod 'SWXMLHash', '~> 2.1.0'
+	pod 'NCMB', :git => 'https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
 end
 
